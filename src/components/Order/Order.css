@@ -1,0 +1,22 @@
+.order-container {
+	background: rgba(255, 153, 0, 0.3);
+	height: 100vh;
+	position: sticky;
+	top: 0;
+}
+.order-info {
+	margin-left: 23px;
+}
+.order-clear-btn {
+	background: #ff3030;
+}
+.order-review-btn {
+	background: #ff9900;
+}
+.btn {
+	height: 48px;
+	width: 80%;
+	border-radius: 4px;
+	border: none;
+	margin: 16px;
+}
