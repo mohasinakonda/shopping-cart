@@ -1,33 +1,18 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import useCart from "../../hooks/useOrderHooks/useCart"
+import useOrder from "../../hooks/useOrderHooks/useOrder"
 import { addToDb, getShoppingCart } from "../../utilities/fakedb"
 import Cart from "../Cart/Cart"
 import Order from "../Order/Order"
 import "./Shop.css"
 
 const Shop = () => {
-	const [cart, setCart] = useState([])
-	const [products, setProducts] = useState([])
-
-	useEffect(() => {
-		fetch("products.json")
-			.then((res) => res.json())
-			.then((data) => setProducts(data))
-	}, [])
+	const [order, setOrder] = useOrder()
+	const [cart, setCart] = useCart(order)
+	// console.log(order)
 	// get stored cart
-	useEffect(() => {
-		const saveCart = []
-		const storedCart = getShoppingCart()
-		for (const id in storedCart) {
-			const addedProduct = products.find((product) => product.id === id)
-			// console.log(addedProduct)
-			if (addedProduct) {
-				const quantity = storedCart[id]
-				addedProduct.quantity = quantity
-				saveCart.push(addedProduct)
-			}
-		}
-		setCart(saveCart)
-	}, [products])
+
 	const cartHandler = (selectedProduct) => {
 		let newProducts = []
 
@@ -46,7 +31,7 @@ const Shop = () => {
 	return (
 		<div className="shop-container">
 			<div className="products">
-				{products.map((product) => (
+				{order.map((product) => (
 					<Cart
 						key={product.id}
 						product={product}
@@ -55,7 +40,11 @@ const Shop = () => {
 				))}
 			</div>
 
-			<Order cart={cart}></Order>
+			<Order cart={cart}>
+				<Link to="/orders">
+					<button className="order-clear-btn btn">review order</button>
+				</Link>
+			</Order>
 		</div>
 	)
 }

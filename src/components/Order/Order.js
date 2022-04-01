@@ -19,8 +19,7 @@ const Order = (props) => {
 				<p>Tax:{tax}</p>
 				<h3>Grand Total:{grandTotal}</h3>
 			</div>
-			<button className="order-clear-btn btn">Clear Cart</button>
-			<button className="order-review-btn btn">Review Order</button>
+			{props.children}
 		</div>
 	)
 }
