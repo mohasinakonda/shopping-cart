@@ -14,11 +14,15 @@ const OrderDetails = () => {
 		const restItem = cart.filter((product) => product.id !== id)
 		setCart(restItem)
 		removeFromDb(id)
-		// console.log(restItem)
+	}
+	let info
+	if (cart.length === 0) {
+		info = "There is no products available"
 	}
 	return (
 		<div className="shop-container">
 			<div className="products-container">
+				{<h2>{info}</h2>}
 				{cart.map((data) => (
 					<ReviewOreder
 						key={data.id}

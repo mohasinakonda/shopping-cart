@@ -1,0 +1,38 @@
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+.form-group{
+    border: 1px solid goldenrod;
+    padding: 10px;
+    border-radius: 9px;
+    margin: 20px;
+    
+}
+.form input{
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 21px;
+}
+label{
+    display: block;
+    margin: 5px;
+
+}
+.lines{
+    display: flex;
+    align-items: center;
+}
+.line{
+    width: 40%;
+    height: 1px;
+    background-color: gray;
+    margin: 5px;
+}
+.sign-in-btn{
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+}

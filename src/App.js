@@ -5,6 +5,8 @@ import Shop from "./components/Shop/Shop"
 // import Order from "./components/Order/Order"
 import OrderDetails from "./components/OrderDetails/OrderDetails"
 import Inventory from "./components/Inventory/Inventory"
+import Login from "./components/Login/Login"
+import SignUp from "./components/SignUp/SignUp"
 
 function App() {
 	return (
@@ -15,6 +17,8 @@ function App() {
 				<Route path="/shop" element={<OrderDetails />}></Route>
 				<Route path="/orders" element={<OrderDetails />}></Route>
 				<Route path="/inventory" element={<Inventory />}></Route>
+				<Route path="/login" element={<Login />}></Route>
+				<Route path="/signup" element={<SignUp />}></Route>
 			</Routes>
 		</div>
 	)
