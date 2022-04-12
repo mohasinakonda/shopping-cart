@@ -1,18 +1,22 @@
 .form-container{
+    /* width: 30%; */
     display: flex;
     justify-content: center;
 }
 .form-group{
+    /* width: 30%; */
     border: 1px solid goldenrod;
     padding: 10px;
     border-radius: 9px;
     margin: 20px;
+    padding: 30px;
     
 }
 .form input{
     padding: 10px;
     border-radius: 8px;
     font-size: 21px;
+    width: 100%;
 }
 label{
     display: block;
@@ -35,4 +39,7 @@ label{
     padding: 10px;
     border: 1px solid goldenrod;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

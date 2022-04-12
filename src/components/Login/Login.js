@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import "./Login.css"
+import img from "../../images/google-icon.png"
 
 const Login = () => {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
+	const [user, setUser] = useState(null)
 
 	const handleEmail = (event) => {
 		setEmail(event.target.value)
@@ -43,7 +45,7 @@ const Login = () => {
 					<p className="line"></p>
 				</div>
 				<button className="sign-in-btn">
-					<img src="../../images/google-icon.png" alt="" />
+					<img style={{ width: "25px" }} src={img} alt="" />
 					Sign in with google
 				</button>
 			</div>

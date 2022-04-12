@@ -7,6 +7,7 @@ import OrderDetails from "./components/OrderDetails/OrderDetails"
 import Inventory from "./components/Inventory/Inventory"
 import Login from "./components/Login/Login"
 import SignUp from "./components/SignUp/SignUp"
+import { useEffect, useState } from "react"
 
 function App() {
 	return (

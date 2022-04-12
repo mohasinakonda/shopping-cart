@@ -15,6 +15,7 @@ const OrderDetails = () => {
 		setCart(restItem)
 		removeFromDb(id)
 	}
+	console.log(cart)
 	let info
 	if (cart.length === 0) {
 		info = "There is no products available"
